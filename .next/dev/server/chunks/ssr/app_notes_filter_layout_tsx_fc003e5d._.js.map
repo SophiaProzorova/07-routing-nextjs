@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/sophiaprozorova/Desktop/Projects/07-routing-nextjs/app/notes/filter/layout.tsx"],"sourcesContent":["type Props = {\n    children: React.ReactNode\n};\n\nconst Layout = (props: Props) => {\n    return(\n        <section>\n            <div>{props.children}</div>\n        </section>\n    )\n};\n\nexport default Layout;"],"names":[],"mappings":";;;;;;AAIA,MAAM,SAAS,CAAC;IACZ,qBACI,8OAAC;kBACG,cAAA,8OAAC;sBAAK,MAAM,QAAQ;;;;;;;;;;;AAGhC;uCAEe"}}]
+}

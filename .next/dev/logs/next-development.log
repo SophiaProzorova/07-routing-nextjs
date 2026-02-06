@@ -1,0 +1,5 @@
+[00:00:06.441] Server  LOG      ✓ Ready in 6.2s
+[00:00:37.857] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[00:00:37.891] Server  ERROR    ⨯ TypeError: Invalid URL
+[00:00:42.907] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[00:00:42.918] Server  ERROR    ⨯ TypeError: Invalid URL

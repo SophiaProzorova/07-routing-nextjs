@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/sophiaprozorova/Desktop/Projects/07-routing-nextjs/app/loading.tsx"],"sourcesContent":["\"use client\"\n\nconst Loading = () => <p>Loading, please wait...</p>;\n\nexport default Loading;"],"names":["c","_c","Loading","$","$i","Symbol","for","t0"],"mappings":";;;;;AAAY,SAAAA,CAAA,IAAAC,EAAA;AAAZ,YAAY;;;AAEZ,gBAAgBC,CAAA;IAAA,MAAAC,CAAA,OAAAF,gLAAA,EAAA;IAAA,IAAAE,CAAA,CAAA,EAAA,KAAA,oEAAA;QAAA,IAAA,IAAAC,EAAA,GAAA,GAAAA,EAAA,GAAA,GAAAA,EAAA,IAAA,EAAA;YAAAD,CAAA,CAAAC,EAAA,CAAA,GAAAC,MAAA,CAAAC,GAAA,CAAA;QAAA;QAAAH,CAAA,CAAA,EAAA,GAAA;IAAA;IAAA,IAAAI,EAAA;IAAA,IAAAJ,CAAA,CAAA,EAAA,KAAAE,MAAA,CAAAC,GAAA,CAAA,8BAAA;QAAMC,EAAA,iBAAA,6LAAA,CAA8B;sBAA3B,uBAAuB,EAA1B,CAA8B;;;;;;QAAAJ,CAAA,CAAA,EAAA,GAAAI,EAAA;IAAA,OAAA;QAAAA,EAAA,GAAAJ,CAAA,CAAA,EAAA;IAAA;IAAA,OAA9BI,EAA8B;AAAA;KAA9CL,OAAO;uCAEEA,OAAO","ignoreList":[]}}]
+}
