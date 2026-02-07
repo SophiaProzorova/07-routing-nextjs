@@ -1,5 +1,872 @@
-[00:00:06.441] Server  LOG      ✓ Ready in 6.2s
-[00:00:37.857] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
-[00:00:37.891] Server  ERROR    ⨯ TypeError: Invalid URL
-[00:00:42.907] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
-[00:00:42.918] Server  ERROR    ⨯ TypeError: Invalid URL
+[00:00:01.301] Server  LOG      ✓ Ready in 1053ms
+[00:00:10.882] Server  WARN     ⚠ Cross origin request detected from 192.168.100.113 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:01:19.721] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:01:19.760] Server  ERROR    ⨯ TypeError: Invalid URL
+[00:07:21.892] Server  LOG      ✓ Compiled in 224ms
+[00:08:57.950] Server  LOG      ✓ Compiled in 308ms
+[00:09:24.841] Server  LOG      ✓ Compiled in 260ms
+[00:09:30.687] Server  LOG      ✓ Compiled in 56ms
+[00:12:46.530] Server  LOG      ✓ Compiled in 278ms
+[00:12:56.288] Server  LOG      ✓ Compiled in 171ms
+[00:15:02.998] Server  LOG      ✓ Compiled in 64ms
+[00:23:24.456] Server  LOG        Reload env: .env
+[00:24:00.753] Server  LOG        Reload env: .env
+[00:24:01.425] Server  LOG      ✓ Compiled in 612ms
+[00:28:55.052] Server  LOG      ✓ Compiled in 221ms
+[00:29:11.827] Server  LOG      ✓ Compiled in 48ms
+[00:33:26.819] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:33:26.879] Server  ERROR    ⨯ TypeError: Invalid URL
+[00:36:13.285] Browser ERROR   ./lib/api.ts:28:7
+Ecmascript file had an error
+  26 | };
+  27 |
+> 28 | const axios = axios.create({
+     |       ^^^^^
+  29 |     baseURL: "https://notehub-public.goit.study/api/",
+  30 | })
+  31 |
+
+the name `axios` is defined multiple times
+
+Import traces:
+  Server Component:
+    ./lib/api.ts
+    ./app/notes/page.tsx
+
+  Client Component Browser:
+    ./lib/api.ts [Client Component Browser]
+    ./app/notes/Notes.client.tsx [Client Component Browser]
+    ./app/notes/Notes.client.tsx [Server Component]
+    ./app/notes/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/api.ts [Client Component SSR]
+    ./app/notes/Notes.client.tsx [Client Component SSR]
+    ./app/notes/Notes.client.tsx [Server Component]
+    ./app/notes/page.tsx [Server Component]
+[00:36:16.553] Browser ERROR   ./lib/api.ts:28:7
+Ecmascript file had an error
+  26 | };
+  27 |
+> 28 | const axios = axios.create({
+     |       ^^^^^
+  29 |     baseURL: "https://notehub-public.goit.study/api/",
+  30 |     headers
+  31 | })
+
+the name `axios` is defined multiple times
+
+Import traces:
+  Server Component:
+    ./lib/api.ts
+    ./app/notes/page.tsx
+
+  Client Component Browser:
+    ./lib/api.ts [Client Component Browser]
+    ./app/notes/Notes.client.tsx [Client Component Browser]
+    ./app/notes/Notes.client.tsx [Server Component]
+    ./app/notes/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/api.ts [Client Component SSR]
+    ./app/notes/Notes.client.tsx [Client Component SSR]
+    ./app/notes/Notes.client.tsx [Server Component]
+    ./app/notes/page.tsx [Server Component]
+[00:37:59.075] Server  LOG      ✓ Compiled in 369ms
+[00:37:59.780] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:38:00.259] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:38:00.327] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:38:00.368] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:38:00.686] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:38:01.069] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:40:49.554] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:40:50.206] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:40:53.871] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:40:54.017] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:41:13.533] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:41:13.934] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:46:00.013] Server  LOG      ✓ Compiled in 1217ms
+[00:46:00.706] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:46:01.527] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:46:12.680] Server  LOG      ✓ Compiled in 125ms
+[00:46:45.077] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:46:45.699] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:47:21.872] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:47:22.392] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:52:09.613] Server  LOG      ✓ Compiled in 267ms
+[00:52:10.173] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:52:12.727] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:52:39.616] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:52:40.303] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:52:48.340] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:52:48.779] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:53:53.103] Server  LOG      ✓ Compiled in 234ms
+[00:53:53.722] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:53:54.272] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:53:55.542] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:53:55.733] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:56:27.810] Server  LOG      ✓ Compiled in 202ms
+[00:56:28.151] Server  WARN    Error: Route "/notes/filter/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:56:28.628] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:58:24.489] Server  LOG      ✓ Compiled in 25ms
+[00:58:25.513] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:58:37.526] Server  ERROR    ⨯ TypeError: Cannot destructure property 'slug' of '(intermediate value)' as it is undefined.
+[00:58:37.965] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[00:59:51.807] Server  LOG      ✓ Compiled in 300ms
+[00:59:53.748] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[01:03:51.123] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[01:04:18.016] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[01:04:40.460] Server  LOG      ✓ Compiled in 335ms
+[01:04:41.313] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[01:04:41.424] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[01:04:41.555] Server  ERROR    ⨯ AxiosError: Request failed with status code 429
+[01:04:49.431] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[01:05:03.575] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[01:07:29.528] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[01:12:13.359] Server  LOG      ✓ Compiled in 662ms
+[01:13:11.086] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[01:13:11.981] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:06:48.849] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:06:51.399] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:10:54.426] Server  LOG      ✓ Compiled in 332ms
+[03:10:56.398] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:10:56.478] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:10:56.714] Server  ERROR    ⨯ AxiosError: Request failed with status code 429
+[03:11:11.782] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:12:33.054] Server  LOG      ✓ Compiled in 1154ms
+[03:12:39.368] Server  LOG      ✓ Compiled in 150ms
+[03:12:46.055] Server  LOG      ✓ Compiled in 294ms
+[03:14:52.289] Server  LOG      ✓ Compiled in 662ms
+[03:14:52.869] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:14:52.873] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:14:52.992] Server  ERROR    ⨯ AxiosError: Request failed with status code 429
+[03:15:23.301] Server  LOG      ✓ Compiled in 238ms
+[03:15:45.973] Server  LOG      ✓ Compiled in 316ms
+[03:16:08.163] Server  LOG      ✓ Compiled in 26ms
+[03:16:51.437] Browser ERROR   ./app/notes/filter/@sidebar/default.tsx:1:1
+Export getCategories doesn't exist in target module
+> 1 | import { getCategories } from "@/lib/api";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import css from "./Sidebar.module.css";
+  3 | import Link from "next/link";
+  4 |
+
+The export getCategories was not found in module [project]/lib/api.ts [app-rsc] (ecmascript).
+Did you mean to import getNotes?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:16:52.202] Server  ERROR    ⨯ AxiosError: Request failed with status code 400
+[03:16:52.572] Server  ERROR    ⨯ AxiosError: Request failed with status code 400
+[03:16:52.668] Server  ERROR    ⨯ AxiosError: Request failed with status code 429
+[03:16:52.706] Server  ERROR    ⨯ AxiosError: Request failed with status code 429
+[03:16:52.708] Server  ERROR    ⨯ AxiosError: Request failed with status code 429
+[03:16:53.112] Server  ERROR    ⨯ AxiosError: Request failed with status code 429
+[03:16:53.114] Server  ERROR    ⨯ AxiosError: Request failed with status code 429
+[03:18:22.643] Server  LOG      ✓ Compiled in 205ms
+[03:18:29.094] Server  LOG      ✓ Compiled in 192ms
+[03:18:34.313] Server  LOG      ✓ Compiled in 27ms
+[03:19:05.712] Server  LOG      ✓ Compiled in 49ms
+[03:21:01.019] Browser ERROR   ./app/notes/filter/@sidebar/default.tsx:1:1
+Export getTags doesn't exist in target module
+> 1 | import { getTags } from "@/lib/api";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import css from "./Sidebar.module.css";
+  3 | import Link from "next/link";
+  4 |
+
+The export getTags was not found in module [project]/lib/api.ts [app-rsc] (ecmascript).
+Did you mean to import getCategories?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[03:21:02.258] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:21:02.312] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:21:02.354] Server  ERROR    ⨯ AxiosError: Request failed with status code 429
+[03:21:02.357] Server  ERROR    ⨯ AxiosError: Request failed with status code 429
+[03:21:02.360] Server  ERROR    ⨯ AxiosError: Request failed with status code 429
+[03:21:02.364] Server  ERROR    ⨯ AxiosError: Request failed with status code 429
+[03:21:02.376] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:21:02.384] Server  ERROR    ⨯ AxiosError: Request failed with status code 429
+[03:21:02.388] Server  ERROR    ⨯ AxiosError: Request failed with status code 429
+[03:21:02.714] Server  ERROR    ⨯ AxiosError: Request failed with status code 429
+[03:21:02.718] Server  ERROR    ⨯ AxiosError: Request failed with status code 429
+[03:22:58.078] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:23:01.615] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:25:20.317] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:25:24.089] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:26:22.196] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:30:32.463] Server  LOG      ✓ Compiled in 240ms
+[03:33:47.322] Server  LOG      ✓ Compiled in 452ms
+[03:33:53.427] Browser ERROR   ./app/notes/filter/[...slug]/page.tsx:9:61
+Parsing ecmascript source code failed
+   7 | const NotePage = async ({ params }: Props) => {
+   8 |     const { slug } = await params;
+>  9 |     const category = slug[0] === "all" ? undefined ? slug[0];
+     |                                                             ^
+  10 | };
+  11 |
+  12 | export default NotePage;
+
+Expected ':', got ';'
+[03:34:01.978] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:34:08.720] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:34:10.002] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:36:16.805] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:36:45.442] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/notes/filter/all. Falling back to browser navigation. {}
+[03:36:45.442] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/notes/filter/all. Falling back to browser navigation. {}
+[03:36:45.443] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/notes/filter/all. Falling back to browser navigation. {}
+[03:36:45.443] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/notes/filter/all. Falling back to browser navigation. {}
+[03:36:45.444] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/notes/filter/all. Falling back to browser navigation. {}
+[03:36:45.445] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/notes/filter/all. Falling back to browser navigation. {}
+[03:36:45.445] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/notes/filter/all. Falling back to browser navigation. {}
+[03:36:45.445] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/notes/filter/all. Falling back to browser navigation. {}
+[03:36:45.445] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/notes/filter/all. Falling back to browser navigation. {}
+[03:36:45.445] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/notes/filter/all. Falling back to browser navigation. {}
+[03:36:45.445] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/notes/filter/all. Falling back to browser navigation. {}
+[03:36:45.445] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/notes/filter/all. Falling back to browser navigation. {}
+[03:36:46.065] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:36:46.067] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:36:46.508] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:36:46.514] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:39:58.194] Server  LOG      ✓ Compiled in 172ms
+[03:40:10.011] Server  LOG      ✓ Compiled in 34ms
+[03:40:22.762] Server  LOG      ✓ Compiled in 22ms
+[03:40:25.829] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:40:25.971] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:40:26.044] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:40:26.274] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:40:26.386] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:40:26.434] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:40:32.216] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:40:32.758] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:42:44.328] Server  LOG      ✓ Compiled in 186ms
+[03:42:52.632] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:42:52.825] Server  ERROR    ⨯ AxiosError: Request failed with status code 404
+[03:50:04.880] Server  LOG      ✓ Compiled in 881ms
+[03:50:05.578] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:50:06.029] Server  ERROR    ⨯ TypeError: Invalid URL
+[03:50:06.058] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/notes/filter/all. Falling back to browser navigation. {}
+[03:50:06.058] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/notes/filter/all. Falling back to browser navigation. {}
+[03:50:06.058] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/notes/filter/all. Falling back to browser navigation. {}
+[03:50:06.106] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:50:06.121] Server  ERROR    ⨯ TypeError: Invalid URL
+[03:50:11.048] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:50:11.056] Server  ERROR    ⨯ TypeError: Invalid URL
+[03:50:21.059] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:50:21.074] Server  ERROR    ⨯ TypeError: Invalid URL
+[03:53:18.340] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:53:18.391] Server  ERROR    ⨯ TypeError: Invalid URL
+[03:53:29.805] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:53:29.820] Server  ERROR    ⨯ TypeError: Invalid URL
+[03:53:30.889] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:53:30.917] Server  ERROR    ⨯ TypeError: Invalid URL
+[03:54:00.758] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:54:00.765] Server  ERROR    ⨯ TypeError: Invalid URL
+[03:56:14.269] Server  LOG      ✓ Compiled in 586ms
+[03:56:16.364] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:56:17.287] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:56:17.894] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:56:18.218] Server  ERROR    ⨯ AxiosError: Request failed with status code 400
+[03:56:18.317] Server  ERROR    ⨯ AxiosError: Request failed with status code 400
+[03:56:21.387] Server  ERROR    ⨯ AxiosError: Request failed with status code 400
+[03:56:52.322] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:56:53.135] Server  ERROR    ⨯ AxiosError: Request failed with status code 400
+[03:58:13.336] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:58:13.821] Server  ERROR    ⨯ AxiosError: Request failed with status code 400
+[03:58:46.308] Server  LOG      ✓ Compiled in 347ms
+[03:58:47.078] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:58:47.191] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:58:47.275] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:58:47.587] Server  LOG     sidebar [{...},{...},{...},{...}]
+[03:58:47.623] Server  LOG     sidebar [{...},{...},{...},{...}]
+[03:58:47.740] Server  LOG     sidebar [{...},{...},{...},{...}]
+[03:58:59.103] Server  ERROR    ⨯ TypeError: Cannot read properties of undefined (reading '0')
+[03:58:59.759] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:00:27.693] Server  LOG      ✓ Compiled in 893ms
+[04:01:56.175] Server  LOG      ✓ Compiled in 444ms
+[04:06:28.814] Server  ERROR    ⨯ ./app/notes/page.tsx:3:1
+Module not found: Can't resolve './Notes.client'
+  1 | import { fetchNotes } from "@/lib/api";
+  2 | import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
+> 3 | import NotesClient from "./Notes.client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const NotesPage = async () => {
+  6 |   const queryClient = new QueryClient();
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:28.843] Server  ERROR    ⨯ ./app/notes/page.tsx:3:1
+Module not found: Can't resolve './Notes.client'
+  1 | import { fetchNotes } from "@/lib/api";
+  2 | import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
+> 3 | import NotesClient from "./Notes.client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const NotesPage = async () => {
+  6 |   const queryClient = new QueryClient();
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:28.866] Server  ERROR    ⨯ ./app/notes/page.tsx:3:1
+Module not found: Can't resolve './Notes.client'
+  1 | import { fetchNotes } from "@/lib/api";
+  2 | import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
+> 3 | import NotesClient from "./Notes.client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const NotesPage = async () => {
+  6 |   const queryClient = new QueryClient();
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:06:28.870] Server  ERROR    ⨯ ./app/notes/page.tsx:3:1
+Module not found: Can't resolve './Notes.client'
+  1 | import { fetchNotes } from "@/lib/api";
+  2 | import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
+> 3 | import NotesClient from "./Notes.client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const NotesPage = async () => {
+  6 |   const queryClient = new QueryClient();
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:10:06.512] Server  LOG      ✓ Compiled in 980ms
+[04:18:51.110] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:18:51.117] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:18:51.852] Server  LOG      ✓ Compiled in 1548ms
+[04:19:31.264] Browser ERROR   ./app/notes/page.tsx:3:1
+Module not found: Can't resolve './Notes.client'
+  1 | import { fetchNotes } from "@/lib/api";
+  2 | import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
+> 3 | import NotesClient from "./Notes.client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const NotesPage = async () => {
+  6 |   const queryClient = new QueryClient();
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:31.269] Browser ERROR   ./app/notes/page.tsx:3:1
+Module not found: Can't resolve './Notes.client'
+  1 | import { fetchNotes } from "@/lib/api";
+  2 | import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
+> 3 | import NotesClient from "./Notes.client";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const NotesPage = async () => {
+  6 |   const queryClient = new QueryClient();
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:31.269] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:34.632] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:34.761] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:34.801] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:35.487] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:35.513] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:36.429] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:36.429] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:36.429] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:36.836] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:36.862] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:36.881] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:36.881] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:36.881] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:37.071] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:37.080] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:37.129] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:37.134] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:37.248] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:37.248] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:37.248] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:37.321] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:37.331] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:37.470] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:37.475] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:37.488] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:37.570] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:37.579] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:37.736] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:37.761] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:37.816] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:37.822] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:37.889] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:37.894] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:38.047] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:38.053] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:38.120] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:38.124] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:38.176] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:38.188] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:38.229] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:38.240] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:38.403] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:38.407] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:38.435] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:38.440] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:38.525] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:38.531] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:38.627] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:38.643] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:38.684] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:38.688] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:38.718] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:38.726] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:38.751] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:38.755] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:38.790] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:38.790] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:38.790] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:38.790] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:38.790] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:38.790] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:38.790] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:38.790] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:38.790] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:38.790] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:38.790] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:38.790] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:38.790] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:38.803] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:38.808] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:38.929] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:38.936] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:38.963] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:38.968] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:38.995] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:39.002] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:39.017] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:39.017] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:39.029] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:39.034] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:39.112] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:39.117] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:39.146] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:39.151] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:39.181] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:39.186] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:39.316] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:39.323] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:39.360] Server  ERROR    ⨯ ReferenceError: api is not defined
+[04:19:39.364] Server  ERROR    ⨯ TypeError: Invalid URL
+[04:19:39.604] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:39.604] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:19:39.604] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:20:32.352] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:20:32.352] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:20:32.353] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:20:32.353] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:20:32.385] Server  LOG      ✓ Compiled in 323ms
+[04:20:42.020] Server  LOG      ✓ Compiled in 47ms
+[04:22:42.963] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:22:42.973] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:22:51.731] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:22:51.731] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:22:52.320] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:23:12.741] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:27:08.685] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:27:08.687] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:28:13.006] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:28:13.007] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:28:13.033] Server  LOG      ✓ Compiled in 772ms
+[04:28:19.776] Browser ERROR   ./app/notes/filter/layout.tsx:10:26
+Parsing ecmascript source code failed
+   8 |     return
+   9 |         <section className={">
+> 10 |             <aside>{props.sidebar}</aside>
+     |                          ^
+  11 |             <div>{props.children}</div>
+  12 |         </section>
+  13 |     )
+
+Expected a semicolon
+[04:28:19.777] Browser ERROR   ./app/notes/filter/layout.tsx:9:29
+Parsing ecmascript source code failed
+   7 | const Layout = (props: Props) => {
+   8 |     return
+>  9 |         <section className={">
+     |                             ^^
+  10 |             <aside>{props.sidebar}</aside>
+  11 |             <div>{props.children}</div>
+  12 |         </section>
+
+Unterminated string constant
+[04:28:19.778] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:28:19.778] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:28:24.031] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:28:24.031] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:28:25.658] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:28:31.836] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:28:32.687] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:28:34.204] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:28:37.891] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:28:40.372] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:28:44.229] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:28:44.852] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:28:45.530] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:28:47.429] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:28:49.698] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:31:45.526] Server  LOG      ✓ Compiled in 1583ms
+[04:31:51.374] Server  LOG      ✓ Compiled in 407ms
+[04:31:56.304] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:31:56.306] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:31:56.313] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:31:56.321] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:31:56.325] Server  LOG      ✓ Compiled in 58ms
+[04:31:56.327] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:31:56.333] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:32:33.937] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:32:49.442] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:32:49.445] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:32:49.446] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:33:21.958] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:33:22.502] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:33:32.075] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:33:32.076] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:33:32.076] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:33:32.076] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:33:32.076] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:33:32.077] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:33:32.077] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:33:32.077] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:33:32.079] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:33:32.079] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:33:32.080] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:33:32.080] Server  ERROR    ⨯ ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[04:33:32.607] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:33:32.868] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:33:32.868] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:33:32.868] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:33:32.868] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:33:32.980] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:33:33.068] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:33:33.109] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:33:33.213] Server  LOG     sidebar [{...},{...},{...},{...}]
+[04:35:32.549] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:35:32.549] Browser ERROR   ./app/notes/filter/[ ... slug]/error.tsx
+Module not found: Can't resolve './error.tsx'
+
+https://nextjs.org/docs/messages/module-not-found
+[04:35:33.034] Server  LOG     sidebar [{...},{...},{...},{...}]

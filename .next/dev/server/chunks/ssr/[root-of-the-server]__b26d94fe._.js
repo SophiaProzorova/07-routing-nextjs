@@ -91,7 +91,7 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-rsc] (ecmascript)");
 ;
 const noteHubAPIUrl = `https://notehub-public.goit.study/api/notes`;
-const API_KEY = process.env.NEXT_PUBLIC_NOTEHUB_TOKEN;
+const API_KEY = ("TURBOPACK compile-time value", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlNvcGhpZS5ncmVhdEBnbWFpbC5jb20iLCJpYXQiOjE3NTk5MDM4ODN9.TBmpiVxJbcXNMdnRBpa0NK2xDd694yQYbLjWZ0bdTTc");
 const headers = {
     'Content-Type': 'application/json',
     accept: 'application/json',
@@ -137,15 +137,15 @@ const createNote = async ({ title, content, tag })=>{
     });
     return response.data;
 };
-const deleteNote = async (note)=>{
-    const url = `${noteHubAPIUrl}/${note.id}`;
+const deleteNote = async (noteId)=>{
+    const url = `${noteHubAPIUrl}/${noteId}`;
     const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].delete(url, {
         headers: headers
     });
     return response.data;
 };
 const getCategories = async ()=>{
-    const res = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"])('/categories');
+    const res = await api.get('/categories');
     return res.data;
 };
 }),

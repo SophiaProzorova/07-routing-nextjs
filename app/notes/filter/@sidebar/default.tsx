@@ -4,9 +4,10 @@ import Link from "next/link";
 
 const NotesSidebar = async () => {
     const categories = await getCategories();
+    console.log("sidebar", categories)
 
     return(
-          <ul className={css.menuList}>
+        <ul className={css.menuList}>
             <li className={css.menuItem}>
                 <Link href={`/notes/filter/all`} className={css.menuLink}>
                     All notes
@@ -19,9 +20,8 @@ const NotesSidebar = async () => {
                     </Link>
                 </li>
             ))}
-            </ul>
-
+        </ul>
     )
 };
 
-export default NotesSidebar
+export default NotesSidebar;

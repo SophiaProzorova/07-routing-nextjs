@@ -1,21 +1,12 @@
-import { getNotes } from "@/lib/api";
-import NoteList from "@/components/NoteList/NoteList";
+import NotesClient from "./Notes.client";
 
 type Props = {
-    params: Promise<{ slug: string[] }>;
-}
-
-const NotesByCategory = async ({ params }: Props ) => {
-    const { slug } = await params;
-    const category = slug[0] === 'all' ? undefined : slug[0];
-    const response = await getNotes(category);
-
-    return(
-        <div>
-            <h1>Notes List</h1>
-            {response?.notes?.length > 0 && <NoteList notes={response.notes}/>}
-        </div>
-    )
+    params: Promise<{ slug: string[] }>
 };
 
-export default NotesByCategory;
+const NotePage = async ({ params }: Props) => {
+    const { slug } = await params;
+    return <NotesClient slug={slug} />;
+};
+
+export default NotePage;

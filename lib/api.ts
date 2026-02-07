@@ -25,9 +25,14 @@ const headers = {
     Authorization: `Bearer ${API_KEY}`    
 };
 
+const api = axios.create({
+    baseURL: "https://notehub-public.goit.study/api",
+    headers,
+});
+
 export const getNotes = async (categoryId?: string) => {
-    const res = await axios.get<NoteListResponse>('/notes', {
-        params: { categoryId },
+    const res = await api.get<NoteListResponse>('/notes', {
+        params: { tag: categoryId },
     });
 
     return res.data;
@@ -40,13 +45,14 @@ export const fetchNoteById = async (id: string) => {
 }
 
 
-export const  fetchNotes = async (search: string, page: number): Promise<FetchNotesResponse> => {
+export const  fetchNotes = async (search: string, page: number, tag?: string): Promise<FetchNotesResponse> => {
     const options = {
         headers: headers,
         params: {
             search: search,
             page: page,
             perPage: 10,
+            ...(tag ? { tag: tag } : {})
         }
     }
 
@@ -79,8 +85,8 @@ export const createNote = async ({title, content, tag}: {title: string, content:
     return response.data;
 };
 
-export const deleteNote = async (note: Note): Promise<Note> => {
-    const url = `${noteHubAPIUrl}/${note.id}`;
+export const deleteNote = async (noteId: string): Promise<Note> => {
+    const url = `${noteHubAPIUrl}/${noteId}`;
 
     const response = await axios.delete<Note>(
         url,
@@ -91,7 +97,19 @@ export const deleteNote = async (note: Note): Promise<Note> => {
 };
 
 export const getCategories = async () => {
-    const res = await axios<Category[]>('/categories');
+    const { notes } = await fetchNotes("", 1);
 
-    return res.data;
+    const tags = notes
+        .map((note) => note.tag)
+        .filter((tag): tag is string => Boolean(tag));
+
+    const uniqueTags = Array.from(new Set(tags));
+
+    return uniqueTags.map((tag) => ({
+        id: tag,
+        name: tag,
+        description: "",
+        createdAt: "",
+        updatedAt: "",
+    }));
 }

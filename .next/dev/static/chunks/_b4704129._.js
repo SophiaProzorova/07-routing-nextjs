@@ -20,7 +20,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-client] (ecmascript)");
 ;
 const noteHubAPIUrl = `https://notehub-public.goit.study/api/notes`;
-const API_KEY = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_NOTEHUB_TOKEN;
+const API_KEY = ("TURBOPACK compile-time value", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlNvcGhpZS5ncmVhdEBnbWFpbC5jb20iLCJpYXQiOjE3NTk5MDM4ODN9.TBmpiVxJbcXNMdnRBpa0NK2xDd694yQYbLjWZ0bdTTc");
 const headers = {
     'Content-Type': 'application/json',
     accept: 'application/json',
@@ -66,15 +66,15 @@ const createNote = async ({ title, content, tag })=>{
     });
     return response.data;
 };
-const deleteNote = async (note)=>{
-    const url = `${noteHubAPIUrl}/${note.id}`;
+const deleteNote = async (noteId)=>{
+    const url = `${noteHubAPIUrl}/${noteId}`;
     const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].delete(url, {
         headers: headers
     });
     return response.data;
 };
 const getCategories = async ()=>{
-    const res = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])('/categories');
+    const res = await api.get('/categories');
     return res.data;
 };
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
@@ -110,6 +110,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteList$2f$No
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
+"use client";
 ;
 ;
 ;
@@ -118,11 +119,11 @@ var _s = __turbopack_context__.k.signature();
 const NoteList = (t0)=>{
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(12);
-    if ($[0] !== "d1b9664be825fa6cc995f82f5108713e1f564b50ecdf925e91149a08787d4e8a") {
+    if ($[0] !== "6ce2fa4db559f1666a35d43b61479ca9c15e4274a0a8f81d7122c992750e91d6") {
         for(let $i = 0; $i < 12; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "d1b9664be825fa6cc995f82f5108713e1f564b50ecdf925e91149a08787d4e8a";
+        $[0] = "6ce2fa4db559f1666a35d43b61479ca9c15e4274a0a8f81d7122c992750e91d6";
     }
     const { notes } = t0;
     const queryClient = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQueryClient"])();
@@ -133,7 +134,7 @@ const NoteList = (t0)=>{
             onSuccess: ()=>{
                 queryClient.invalidateQueries({
                     queryKey: [
-                        "note"
+                        "notes"
                     ]
                 });
             }
@@ -146,8 +147,8 @@ const NoteList = (t0)=>{
     const mutation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMutation"])(t1);
     let t2;
     if ($[3] !== mutation) {
-        t2 = async (note_0)=>{
-            mutation.mutate(note_0);
+        t2 = async (noteId_0)=>{
+            mutation.mutate(noteId_0);
         };
         $[3] = mutation;
         $[4] = t2;
@@ -159,65 +160,65 @@ const NoteList = (t0)=>{
     if ($[5] !== handleDeleteNote || $[6] !== notes) {
         let t4;
         if ($[8] !== handleDeleteNote) {
-            t4 = (note_1)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+            t4 = (note)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                     className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteList$2f$NoteList$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].listItem,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                             className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteList$2f$NoteList$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].title,
-                            children: note_1.title
+                            children: note.title
                         }, void 0, false, {
                             fileName: "[project]/components/NoteList/NoteList.tsx",
-                            lineNumber: 53,
-                            columnNumber: 67
+                            lineNumber: 55,
+                            columnNumber: 63
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteList$2f$NoteList$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].content,
-                            children: note_1.content
+                            children: note.content
                         }, void 0, false, {
                             fileName: "[project]/components/NoteList/NoteList.tsx",
-                            lineNumber: 53,
-                            columnNumber: 112
+                            lineNumber: 55,
+                            columnNumber: 106
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteList$2f$NoteList$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].footer,
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteList$2f$NoteList$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].tag,
-                                    children: note_1.tag
+                                    children: note.tag
                                 }, void 0, false, {
                                     fileName: "[project]/components/NoteList/NoteList.tsx",
-                                    lineNumber: 53,
-                                    columnNumber: 187
+                                    lineNumber: 55,
+                                    columnNumber: 179
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    href: `/notes/${note_1.id}`,
+                                    href: `/notes/${note.id}`,
                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteList$2f$NoteList$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].link,
                                     children: "View details"
                                 }, void 0, false, {
                                     fileName: "[project]/components/NoteList/NoteList.tsx",
-                                    lineNumber: 53,
-                                    columnNumber: 232
+                                    lineNumber: 55,
+                                    columnNumber: 222
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteList$2f$NoteList$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].button,
-                                    onClick: ()=>handleDeleteNote(note_1),
+                                    onClick: ()=>handleDeleteNote(note.id),
                                     children: "Delete"
                                 }, void 0, false, {
                                     fileName: "[project]/components/NoteList/NoteList.tsx",
-                                    lineNumber: 53,
-                                    columnNumber: 307
+                                    lineNumber: 55,
+                                    columnNumber: 295
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/NoteList/NoteList.tsx",
-                            lineNumber: 53,
-                            columnNumber: 159
+                            lineNumber: 55,
+                            columnNumber: 151
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
-                }, note_1.id, true, {
+                }, note.id, true, {
                     fileName: "[project]/components/NoteList/NoteList.tsx",
-                    lineNumber: 53,
-                    columnNumber: 22
+                    lineNumber: 55,
+                    columnNumber: 20
                 }, ("TURBOPACK compile-time value", void 0));
             $[8] = handleDeleteNote;
             $[9] = t4;
@@ -238,7 +239,7 @@ const NoteList = (t0)=>{
             children: t3
         }, void 0, false, {
             fileName: "[project]/components/NoteList/NoteList.tsx",
-            lineNumber: 68,
+            lineNumber: 70,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[10] = t3;
@@ -256,8 +257,8 @@ _s(NoteList, "mUUakYvFQSudGRmMzZErOI9nuuc=", false, function() {
 });
 _c = NoteList;
 const __TURBOPACK__default__export__ = NoteList;
-async function _temp(note) {
-    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["deleteNote"])(note);
+async function _temp(noteId) {
+    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["deleteNote"])(noteId);
 }
 var _c;
 __turbopack_context__.k.register(_c, "NoteList");

@@ -103,7 +103,7 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-ssr] (ecmascript)");
 ;
 const noteHubAPIUrl = `https://notehub-public.goit.study/api/notes`;
-const API_KEY = process.env.NEXT_PUBLIC_NOTEHUB_TOKEN;
+const API_KEY = ("TURBOPACK compile-time value", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlNvcGhpZS5ncmVhdEBnbWFpbC5jb20iLCJpYXQiOjE3NTk5MDM4ODN9.TBmpiVxJbcXNMdnRBpa0NK2xDd694yQYbLjWZ0bdTTc");
 const headers = {
     'Content-Type': 'application/json',
     accept: 'application/json',
@@ -149,15 +149,15 @@ const createNote = async ({ title, content, tag })=>{
     });
     return response.data;
 };
-const deleteNote = async (note)=>{
-    const url = `${noteHubAPIUrl}/${note.id}`;
+const deleteNote = async (noteId)=>{
+    const url = `${noteHubAPIUrl}/${noteId}`;
     const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].delete(url, {
         headers: headers
     });
     return response.data;
 };
 const getCategories = async ()=>{
-    const res = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])('/categories');
+    const res = await api.get('/categories');
     return res.data;
 };
 }),
@@ -187,6 +187,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/api.ts [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteList$2f$NoteList$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/components/NoteList/NoteList.module.css [app-ssr] (css module)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
+"use client";
 ;
 ;
 ;
@@ -195,17 +196,17 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 const NoteList = ({ notes })=>{
     const queryClient = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useQueryClient"])();
     const mutation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMutation"])({
-        mutationFn: async (note)=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["deleteNote"])(note),
+        mutationFn: async (noteId)=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["deleteNote"])(noteId),
         onSuccess: ()=>{
             queryClient.invalidateQueries({
                 queryKey: [
-                    'note'
+                    'notes'
                 ]
             });
         }
     });
-    const handleDeleteNote = async (note)=>{
-        mutation.mutate(note);
+    const handleDeleteNote = async (noteId)=>{
+        mutation.mutate(noteId);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteList$2f$NoteList$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].list,
@@ -217,7 +218,7 @@ const NoteList = ({ notes })=>{
                         children: note.title
                     }, void 0, false, {
                         fileName: "[project]/components/NoteList/NoteList.tsx",
-                        lineNumber: 30,
+                        lineNumber: 32,
                         columnNumber: 15
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -225,7 +226,7 @@ const NoteList = ({ notes })=>{
                         children: note.content
                     }, void 0, false, {
                         fileName: "[project]/components/NoteList/NoteList.tsx",
-                        lineNumber: 31,
+                        lineNumber: 33,
                         columnNumber: 15
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -236,7 +237,7 @@ const NoteList = ({ notes })=>{
                                 children: note.tag
                             }, void 0, false, {
                                 fileName: "[project]/components/NoteList/NoteList.tsx",
-                                lineNumber: 33,
+                                lineNumber: 35,
                                 columnNumber: 19
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -245,33 +246,33 @@ const NoteList = ({ notes })=>{
                                 children: "View details"
                             }, void 0, false, {
                                 fileName: "[project]/components/NoteList/NoteList.tsx",
-                                lineNumber: 34,
+                                lineNumber: 36,
                                 columnNumber: 19
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteList$2f$NoteList$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].button,
-                                onClick: ()=>handleDeleteNote(note),
+                                onClick: ()=>handleDeleteNote(note.id),
                                 children: "Delete"
                             }, void 0, false, {
                                 fileName: "[project]/components/NoteList/NoteList.tsx",
-                                lineNumber: 35,
+                                lineNumber: 37,
                                 columnNumber: 19
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/NoteList/NoteList.tsx",
-                        lineNumber: 32,
+                        lineNumber: 34,
                         columnNumber: 15
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, note.id, true, {
                 fileName: "[project]/components/NoteList/NoteList.tsx",
-                lineNumber: 29,
+                lineNumber: 31,
                 columnNumber: 11
             }, ("TURBOPACK compile-time value", void 0)))
     }, void 0, false, {
         fileName: "[project]/components/NoteList/NoteList.tsx",
-        lineNumber: 27,
+        lineNumber: 29,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
