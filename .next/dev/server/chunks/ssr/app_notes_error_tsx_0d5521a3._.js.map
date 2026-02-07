@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/sophiaprozorova/Desktop/Projects/07-routing-nextjs/app/notes/error.tsx"],"sourcesContent":["\"use client\"\n\ntype Props = {\n    error: Error\n};\n\nconst Error = ({ error }: Props) => {\n    return (\n        <p>Could not fetch the list of notes. {error.message}</p>\n    )\n};\n\nexport default Error;"],"names":[],"mappings":";;;;;AAAA;;AAMA,MAAM,QAAQ,CAAC,EAAE,KAAK,EAAS;IAC3B,qBACI,8OAAC;;YAAE;YAAoC,MAAM,OAAO;;;;;;;AAE5D;uCAEe"}}]
-}
