@@ -15,14 +15,13 @@ import { useDebouncedCallback } from 'use-debounce';
 import css from './NotesPage.module.css';
 
 type Props = {
-  slug: string[];
+  tag?: string;
 }
 
-function NotesClient({ slug }: Props) {
+function NotesClient({ tag }: Props) {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [searchQuery, setSearchQuery] = useState('');
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const tag = slug[0] === "all" ? undefined : slug[0];
 
   const updateSearchQuery = useDebouncedCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);

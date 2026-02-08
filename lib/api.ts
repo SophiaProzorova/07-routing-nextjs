@@ -5,17 +5,6 @@ interface FetchNotesResponse {
     notes: Note[],
     totalPages: number
 }
-export type NoteListResponse = {
-    notes: Note[],
-};
-
-export type Category = {
-    id: string;
-    name: string;
-    description: string;
-    createdAt: string;
-    updatedAt: string;
-};
 
 const noteHubAPIUrl = `https://notehub-public.goit.study/api/notes`;
 const API_KEY = process.env.NEXT_PUBLIC_NOTEHUB_TOKEN;
@@ -24,19 +13,6 @@ const headers = {
     accept: 'application/json',
     Authorization: `Bearer ${API_KEY}`    
 };
-
-const api = axios.create({
-    baseURL: "https://notehub-public.goit.study/api",
-    headers,
-});
-
-export const getNotes = async (categoryId?: string) => {
-    const res = await api.get<NoteListResponse>('/notes', {
-        params: { tag: categoryId },
-    });
-
-    return res.data;
-}
 
 export const fetchNoteById = async (id: string) => {
     const res = await axios.get<Note>(`${noteHubAPIUrl}/${id}`, { headers });
@@ -95,21 +71,3 @@ export const deleteNote = async (noteId: string): Promise<Note> => {
 
     return response.data;
 };
-
-export const getCategories = async () => {
-    const { notes } = await fetchNotes("", 1);
-
-    const tags = notes
-        .map((note) => note.tag)
-        .filter((tag): tag is string => Boolean(tag));
-
-    const uniqueTags = Array.from(new Set(tags));
-
-    return uniqueTags.map((tag) => ({
-        id: tag,
-        name: tag,
-        description: "",
-        createdAt: "",
-        updatedAt: "",
-    }));
-}

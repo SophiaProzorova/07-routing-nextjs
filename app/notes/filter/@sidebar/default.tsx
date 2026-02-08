@@ -1,12 +1,11 @@
-import { getCategories } from "@/lib/api";
+import { NOTE_CATEGORIES } from "@/lib/constants";
 import css from "./Sidebar.module.css";
 import Link from "next/link";
 
-const NotesSidebar = async () => {
-    const categories = await getCategories();
-    console.log("sidebar", categories)
+const NotesSidebar = () => {
+    const categories = NOTE_CATEGORIES;
 
-    return(
+    return (
         <ul className={css.menuList}>
             <li className={css.menuItem}>
                 <Link href={`/notes/filter/all`} className={css.menuLink}>
